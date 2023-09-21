@@ -7,19 +7,36 @@ import random
 # ページ設定（タブに表示されるタイトル、表示幅）
 st.set_page_config(page_title="タイトル", layout="wide")
 
-# タイトルを設定
-st.title("おみくじアプリ")
 
-if  st.button("おみくじを引く"):
-    results = ["大吉","中吉","小吉","吉","凶","大凶"]
-    result = random.choice(results)
-    st.write(f"結果:{result}")
+# レシピリスト
+recipes = [
+    "ハンバーガー",
+    "チーズバーガー",
+    "ダブルチーズバーガー",
+    "チキンフィレオ",
+    "照り焼きチキンフィレオ",
+    "月見バーガー",
+    "照り焼きバーガー",
+    "マクポ",
+    "エグチ",
+    "チキチー",
+    "フィッシュフィレオ",
+    "エビシュリンプ"
+    # 他にも好きなレシピを追加
+]
 
-    # 結果に応じたコメント
-    comments = {
-        "大吉":"いい一日になるでしょう",
-        "中吉":"スカ"
-        "大凶":"外に出ないでください"
-    }
-comment = comments[result]
+# Streamlitアプリケーションのタイトルと説明
+st.title("I love mac")
+st.write("ランダムにマックのバーガーを提案します。")
+
+# レシピをランダムに選択するボタン
+if st.button("今日のハンバーガーを決める"):
+    selected_recipe = random.choice(recipes)
+    st.write(f"提案されたレシピ: {selected_recipe}")
+
+# レシピリストを表示
+st.write("レシピリスト:")
+for recipe in recipes:
+    st.write(recipe)
+
 
