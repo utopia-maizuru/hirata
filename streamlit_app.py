@@ -34,9 +34,5 @@ if st.button("今日のハンバーガーを決める"):
     selected_recipe = random.choice(recipes)
     st.write(f"提案されたレシピ: {selected_recipe}")
 
-# レシピリストを表示
-st.write("レシピリスト:")
-for recipe in recipes:
-    st.write(recipe)
 
 
