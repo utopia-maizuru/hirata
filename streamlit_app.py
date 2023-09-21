@@ -20,5 +20,5 @@ if  st.button("おみくじを引く"):
         "大吉":"いい一日になるでしょう",
         "大凶":"外に出ないでください"
     }
-
+comment = comments[result]
 
