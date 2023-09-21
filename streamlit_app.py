@@ -14,8 +14,11 @@ if  st.button("おみくじを引く"):
     results = ["大吉","中吉","小吉","吉","凶","大凶"]
     result = random.choice(results)
     st.write(f"結果:{result}")
-    comment = {
+
+    # 結果に応じたコメント
+    comments = {
         "大吉":"いい一日になるでしょう"
+        "大凶":"外に出ないでください"
     }
 
 
